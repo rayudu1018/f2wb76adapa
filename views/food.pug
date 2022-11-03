@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{"foodtype":"Andhra food","foodquality":"Excellent","foodcost":"200$"},{"foodtype":"Maharastra food","foodquality":"Avearge","foodcost":"400$"},{"foodtype":"chinese food","foodquality":"Good","foodcost":"600$"}];
+
+  div(class="container-fluid")
+    div(class="row")
+    each item in results
+      div(class="col-sm-2") Food type:#{item.foodtype}, Food quality:#{item.foodquality}, Food Cost:#{item.foodcost}
+
+  br
